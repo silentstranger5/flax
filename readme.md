@@ -1,6 +1,6 @@
 # Flax: Basic E-Shop app built with Flask and Bootstrap
 
-This is a Flax, a basic e-shop application. This application implements a user authentication, shopping system, and admin panel.
+This is a Flax, a basic e-shop application.
 
 | Module Name   | Description |
 |---------------|-------------|
@@ -12,9 +12,11 @@ In order to access admin panel, you need to register a user called 'admin'.
 
 This is an app stack:
 
-- Flask
-- Bootstrap
-- SQLite
+| Application   | Description   |
+|---------------|---------------|
+| Flask         | Backend       |
+| Bootstrap     | Front-end     |
+| SQLite        | Database      |
 
 Here is a gist of implemented functions:
 
@@ -46,6 +48,7 @@ git clone https://github.com/silentstranger5/flax.git
 cd flax
 # configure and activate your virtual environment here
 pip install -e .
+flask --app flax init-db
 flask --app flax run
 ```
 
