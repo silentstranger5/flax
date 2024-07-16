@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block header %}
+  <h1 class="text-center">{% block title %}Panel{% endblock %}</h1>
+{% endblock %}
+
+{% block content %}
+  <div class="d-flex flex-column">
+    <a class="btn action" href="{{ url_for('admin.add') }}">Add product</a>
+    <a class="btn action" href="{{ url_for('admin.manage') }}">Manage products</a>
+  </div>
+{% endblock %}

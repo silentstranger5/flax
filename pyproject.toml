@@ -1,0 +1,11 @@
+[project]
+name = "flax"
+version = "1.0.0"
+description = "The basic e-shop app built using Flask and Bootstrap."
+dependencies = [
+    "flask",
+]
+
+[build-system]
+requires = ["flit_core<4"]
+build-backend = "flit_core.buildapi"

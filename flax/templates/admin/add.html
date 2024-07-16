@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block header %}
+  <h1 class="text-center">{% block title %}Add Product{% endblock %}</h1> 
+{% endblock %}
+
+{% block content %}
+  <form enctype="multipart/form-data" method="post">
+    <div class="mb-3">
+      <label for="name" class="form-label">Name</label>
+      <input name="name" id="name" class="form-control" required>
+    </div>
+    <div class="mb-3">
+      <label for="price" class="form-label">Price</label>
+      <input type="number" name="price" id="price" step="0.01" class="form-control" required>
+    </div>
+    <div class="mb-3">
+      <label for="amount" class="form-label">Amount</label>
+      <input type="number" name="amount" id="amount" class="form-control" required>
+    </div>
+    <div class="mb-3">
+      <label for="description" class="form-label">Description</label>
+      <textarea id="description" name="description" class="form-control" rows="5"></textarea>
+    </div>
+    <div class="mb-3">
+      <label for="photo" class="form-label">Photo</label>
+      <input type="file" id="photo" name="photo" accept="image/png, image/jpeg" class="form-control" required>
+    </div>
+    <div class="mb-3">
+      <input type="submit" value="Add Product" class="btn btn-primary">
+    </div>
+  </form>
+{% endblock %}

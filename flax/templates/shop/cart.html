@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+
+{% block header %}
+  <h1 class="text-center">{% block title %}Cart{% endblock %}</h1>
+{% endblock %}
+
+{% block content %}
+  <div class="table-responsive">
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th scope="col">Name</th>
+          <th scope="col">Amount</th>
+          <th scope="col">Price</th>
+          <th scope="col">Sum</th>
+          <th scope="col"></th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for product in products %}
+          <tr>
+            <td>{{ product.name }}</td>
+            <td>{{ product.cart_amount }}</td>
+            <td>$ {{ product.price }}</td>
+            <td>$ {{ product.cart_amount * product.price}}</td>
+            <td><a href="{{ url_for('shop.delete', id=product.id) }}" class="btn btn-danger">Delete</a></td>
+          </tr>
+        {% endfor %}
+      </tbody>
+      <tfoot>
+        <tr>
+          <th>Total</th>
+          <td colspan="2">{{ total.amount if total.amount else 0 }}</td>
+          <td>$ {{ total.price if total.price else 0 }}</td>
+          <td><a class="btn btn-primary" href="{{ url_for('shop.buy') }}">Buy</a></td>
+        </tr>
+      </tfoot>
+    </table>
+  </div>
+{% endblock %}

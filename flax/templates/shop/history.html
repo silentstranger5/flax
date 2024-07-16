@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+
+{% block header %}
+  <h1 class="text-center">{% block title %}History{% endblock %}</h1>
+{% endblock %}
+
+{% block content %}
+  <div class="table-responsive">
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th scope="col">Date</th>
+          <th scope="col">Amount</th>
+          <th scope="col">Price</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for purchase in history %}
+          <tr>
+            <td>{{ purchase.created }}</td>
+            <td>{{ purchase.amount }}</td>
+            <td>$ {{ purchase.price }}</td>
+          </tr>
+        {% endfor %}
+      </tbody>
+      <tfoot>
+        <tr>
+          <th>Total</th>
+          <td>{{ total.amount }}</td>
+          <td>$ {{ total.price }}</td>
+        </tr>
+      </tfoot>
+    </table>
+  </div>
+{% endblock %}

@@ -1,0 +1,8 @@
+body { background: #eee; }
+.main { background: white; min-height: 100vh; padding: 0; }
+.content { padding: 1em; }
+.product-photo { max-width: 50%; border: 1px solid gray; }
+.action { border: 1px solid gray; margin-bottom: 1rem; }
+.action:hover { border: 1px solid blue; }
+.error { margin: 1em 0; padding: 1em; border: 1px solid red; }
+.message { margin: 1em 0; padding: 1em; border: 1px solid blue; }
