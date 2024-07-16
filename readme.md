@@ -8,6 +8,8 @@ This is a Flax, a basic e-shop application. This application implements a user a
 | auth.py       | Authentication: Registration and Login |
 | shop.py       | Shop application: Index, Cart, History |
 
+In order to access admin panel, you need to register a user called 'admin'.
+
 This is an app stack:
 
 - Flask
